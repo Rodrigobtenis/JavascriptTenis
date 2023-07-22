@@ -212,7 +212,7 @@ switch (operacion) {
                   }
                 
                  
-                  if (puntajeUsuario >= 11) {
+                  if (puntajeUsuario >= 6) {
                     alert(`Felicitaciones, ${nombreUsuario} gano el juego! `);
                   } else {
                     alert(`Lo lamento, ${nombreAdversario} gano el juego! `);
