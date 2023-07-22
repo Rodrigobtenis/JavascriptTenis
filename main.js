@@ -138,7 +138,7 @@ if (edad >= 1 && edad <=20 ){
         }
        while (input !== "esc"); */
       
-      function calculadora  (num1, num2, operacion) {
+      /* function calculadora  (num1, num2, operacion) {
 switch (operacion) {
     case "+":
     return num1 + num2;
@@ -173,6 +173,51 @@ switch (operacion) {
                 alert(`el resultado es ${resultado}`);
                 
 
+ */
 
 
 
+                function jugarTenis() {
+                  alert("Bienenido al juego de tenis");
+                 
+                let nombreUsuario = prompt("Indica tu nombre");
+                let nombreAdversario = prompt("Indica el nombre de tu oponente")
+                alert(`${nombreUsuario} y ${nombreAdversario} estan por comenzar el partido`)
+
+                  let puntajeUsuario = 0;
+                  let puntajeComputadora = 0;
+                
+                  while (puntajeUsuario < 6 && puntajeComputadora < 6) {
+                  
+                    alert(`Puntaje: ${nombreUsuario} ${puntajeUsuario} - ${nombreAdversario} ${puntajeComputadora}`);
+                
+                    
+                    const golpeUsuario = confirm("Intetaras golpear la pelota?");
+                
+                    if (golpeUsuario) {
+                     
+                      const exitoGolpeJugador = Math.random() < 0.6; 
+                      if (exitoGolpeJugador) {
+                        puntajeUsuario++;
+                        alert(`Excelente golpe, punto para ${nombreUsuario}` );
+                      } else {
+                        alert(`La tiraste afuera, punto para ${nombreAdversario}.`);
+                        puntajeComputadora++;
+                      }
+                    } else {
+                      
+                      alert(`Te diste por vencido. Punto para ${nombreAdversario}`);
+                      puntajeComputadora++;
+                    }
+                  }
+                
+                 
+                  if (puntajeUsuario >= 11) {
+                    alert(`Felicitaciones, ${nombreUsuario} gano el juego! `);
+                  } else {
+                    alert(`Lo lamento, ${nombreAdversario} gano el juego! `);
+                  }
+                }
+                
+              //llamada a la accion
+                jugarTenis();
